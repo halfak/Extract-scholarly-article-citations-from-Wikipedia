@@ -14,7 +14,7 @@ HTML_TAGS = ['ref', 'span', 'div', 'table', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
 TAGS_RE = re.compile(r'<(/\s*)?(' + '|'.join(HTML_TAGS) + ')(\s[^>\n\r]+)?>', re.I)
 
 '''
-DOI_RE = re.compile(r'\b(10\.\d+/[^\s\|\]\}\?\,]+)')
+DOI_RE = re.compile(r'\b(10\.\d+/[^\./\s\|\]\}\?\,]+)')
 
 def extract_regex(text):
     for match in DOI_RE.finditer(text):
